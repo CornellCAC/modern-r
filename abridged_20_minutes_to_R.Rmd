@@ -67,6 +67,8 @@ Markdown also supports a hierarchy of headings to organize your document. The **
 
 ------------------------------------------------------------------------
 
+```{=html}
+<!--
 # R as a calculator
 
 We saw this content already, in the form of comments in an R script file. The text formatting options in R Notebook make communication more effective and visually interesting.
@@ -96,7 +98,8 @@ We saw this content already, in the form of comments in an R script file. The te
 -   `x & y` x AND y (compares bitwise, so it potentially returns a vector)
 
 see `?base::Logic` for details.
-
+-->
+```
 #### Try it:
 
 We can try the code right in the notebook. This is an R code chunk (note that it starts with `{r}` ).
@@ -296,6 +299,8 @@ R has two types of data containers; containers that hold collections of same-typ
 
 You can convert between compatible containers using `as.*()` methods (as.list(), as.data.frame()). For instance, you might convert a matrix `m` to a data.frame using `as.data.frame(m)`.
 
+````{=html}
+<!--
 ## Vector
 
 A vector is like a column from a data table. It has one dimension (length) and all the elements in the vector are of the same kind.
@@ -467,6 +472,8 @@ names(my_list2)
 ```
 
 Naming the list items creates a data structure like a hash table or Python dictionary. Lists with named elements are used for model results and you can access the particular components by name (e.g. model\$residuals).
+-->
+````
 
 ## Data Frames
 

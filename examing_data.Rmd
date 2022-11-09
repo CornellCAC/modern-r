@@ -80,7 +80,7 @@ df$Registration.Time = ymd_hms(df$Registration.Time)
 df$org = factor(df$org, levels=c('wcm', 'cu', 'other'))
 
 skim(df)
-
+#summary(df)
 ```
 
 # ggplot2 & dplyr
@@ -215,9 +215,9 @@ plot_df = (
   + xlab("Time")
   + ylab("Total  Registrations")
   #+ geom_point(aes(color=org), shape="cross")
-  + geom_line(aes(y=cumgrptotal, color=org))
-  + geom_hline(yintercept = 200, linetype="dashed", color='red')
-  + annotate("text", x=ymd_hm("2022-10-18 13:00"), y=200, label="Hypothetical Course Capacity", hjust=0, vjust=-.5)
+  #+ geom_line(aes(y=cumgrptotal, color=org))
+  #+ geom_hline(yintercept = 200, linetype="dashed", color='red')
+  #+ annotate("text", x=ymd_hm("2022-10-18 13:00"), y=200, label="Hypothetical Course Capacity", hjust=0, vjust=-.5)
 )
 
 #see vignette("ggplot2-specs") for linetype options
@@ -272,7 +272,7 @@ With thousands of packages, R probably supports the analysis you need. Identifyi
     -   CRAN Task View organizes packages by topics:\
         <https://cran.r-project.org/web/views/>
 
-    -   Search for keywords in the package names at\
+    -   Search for keywords in the package listing at\
         <https://cran.r-project.org/web/packages/available_packages_by_name.html>
 
     -   *Advanced R (Programming)*, Hadley Wickam - <https://adv-r.hadley.nz>
